@@ -10,7 +10,6 @@ kGrad is a lightweight Kotlin library designed for educational purposes, inspire
 
 - Scalar-Based Computation: kGrad operates on scalar values, making it easier to understand the flow of gradients and how operations are chained together. This simplicity is beneficial for educational purposes, allowing users to grasp the basics of computational graphs and gradient flow.
 
-
 ### Examples:
 
 #### Automatic differentiation
@@ -94,3 +93,19 @@ for (i in 0..100) {
     println("$i\tloss: ${loss.data}")
 }
 ```
+
+### A Jupyter notebook for constructing kGrad from scratch.
+
+The Jupyter notebook guides the creation of kGrad, through these key steps:
+
+- **Theoretical Foundation**: It begins with a review of calculus theory, focusing on partial derivatives.
+
+- **Value Class**: A class called Value is defined to handle scalar values and their corresponding gradients.
+
+- **Operations Implementation**: Basic arithmetic operations (like addition and multiplication) and more complex mathematical functions are implemented, ensuring that gradients are computed correctly.
+
+- **Backward Propagation**: Techniques such as backward propagation are developed to compute gradients using the chain rule and other derivative rules efficiently.
+
+- **Implementation of Neural Network Components**: Classes like Neuron, Layer, and MLP (Multilayer Perceptron) are implemented to build and train neural networks.
+
+- **Integration**: Finally, all components are integrated to create a comprehensive automatic differentiation framework, which forms the basis of kGrad.
