@@ -96,7 +96,7 @@ for (i in 0..100) {
 
 ### A Jupyter notebook for constructing kGrad from scratch.
 
-The Jupyter notebook guides the creation of kGrad, through these key steps:
+[This](https://github.com/bushjavier/kGrad/blob/main/Writing%20kGrad%20from%20scratch%20notebook.ipynb) Jupyter notebook guides the creation of kGrad, through these key steps:
 
 - **Theoretical Foundation**: It begins with a review of calculus theory, focusing on partial derivatives.
 
@@ -109,3 +109,5 @@ The Jupyter notebook guides the creation of kGrad, through these key steps:
 - **Implementation of Neural Network Components**: Classes like Neuron, Layer, and MLP (Multilayer Perceptron) are implemented to build and train neural networks.
 
 - **Integration**: Finally, all components are integrated to create a comprehensive automatic differentiation framework, which forms the basis of kGrad.
+
+https://github.com/bushjavier/kGrad/blob/main/Writing%20kGrad%20from%20scratch%20notebook.ipynb
