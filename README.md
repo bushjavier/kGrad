@@ -111,3 +111,5 @@ for (i in 0..100) {
 - **Integration**: Finally, all components are integrated to create a comprehensive automatic differentiation framework, which forms the basis of kGrad.
 
 https://github.com/bushjavier/kGrad/blob/main/Writing%20kGrad%20from%20scratch%20notebook.ipynb
+
+The notebook is in Kotlin please use [this guide](https://github.com/Kotlin/kotlin-jupyter#installation) to run the notebook locally 
