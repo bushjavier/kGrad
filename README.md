@@ -40,8 +40,7 @@ println(b.grad)  // Output: -4.0
 println(c.grad)  // Output: -2.0
 println(f.grad)  // Output: 4.0
 
-l.plot().render(Format.PNG).toFile(java.io.File("graph-example.png"))
-
+ImageIO.write(l.plot(), "png", java.io.File("graph-example.png"));
 ```
 The image generated "graph-example.png" illustrates the computational graph created for the expression described above.
 
