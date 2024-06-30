@@ -16,7 +16,7 @@ class Value(var data: Double, var label: String? = null) {
 
     private var children: List<Value> = listOf()
     private var usedOperator: String? = null
-    internal var grad = 0.0
+    var grad = 0.0
     private var backwardFunction: () -> Unit = {}
 
     operator fun plus(other: Value): Value = Value(this.data + other.data).also { plusResult ->
