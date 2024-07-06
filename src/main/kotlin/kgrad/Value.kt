@@ -91,6 +91,27 @@ class Value(var data: Double, var label: String? = null) {
         }
     }
 
+    fun leakyRelu(alpha: Double = 0.01): Value {
+        val leakyReluData = if (data > 0) data else alpha * data
+        return Value(leakyReluData).also { leakyReluResult ->
+            leakyReluResult.usedOperator = "leakyRelu"
+            leakyReluResult.children = listOf(this)
+            leakyReluResult.backwardFunction = fun() {
+                val gradInput = if (data > 0) 1.0 else alpha
+                this.grad += gradInput * leakyReluResult.grad
+            }
+        }
+    }
+
+    fun relu(): Value = Value(if (this.data < 0.0) 0.0 else this.data).also { reluResult ->
+        reluResult.usedOperator = "ReLU"
+        reluResult.children = listOf(this)
+
+        reluResult.backwardFunction = fun() {
+            this.grad += (if (this.data > 0.0) 1.0 * reluResult.grad else 0.0)
+        }
+    }
+
     fun backward() {
         val topo = mutableListOf<Value>()
         val visited = mutableSetOf<Value>()
